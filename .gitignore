@@ -130,3 +130,6 @@ dmypy.json
 
 # ignore data folder
 /data
+
+# ignore mlruns folder
+/mlruns

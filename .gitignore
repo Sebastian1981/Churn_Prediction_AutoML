@@ -136,6 +136,7 @@ dmypy.json
 
 # ignore model info folders
 /*_info
+*.pkl
 
 # ignore html eda figures folder
 /AutoViz_Plots

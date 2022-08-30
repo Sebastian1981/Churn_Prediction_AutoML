@@ -142,3 +142,7 @@ dmypy.json
 
 # ignore mlruns folder
 /mlruns
+
+# ignore log files
+*.logs
+*_logs.csv

@@ -1,3 +1,4 @@
+import datetime
 import numpy as np
 import pandas as pd
 
@@ -16,3 +17,12 @@ def get_categorical_features(df:pd.DataFrame)->list:
     """Return list of all categorical features in dataframe df """
     categorical_features = list(df.dtypes[df.dtypes == 'object'].index)
     return categorical_features
+
+def add_datetime_to_filename(filename:str)->str:
+    """Take filename and add current time info (i.e. date/hour/min) at ending of filename """
+    # current time
+    ct = datetime.datetime.now()
+    filename_new = filename + '_' + str(ct).replace("-", "_").replace(" ", "_").replace(":", "_").replace(".", "_")
+    # crop to minutes
+    filename_new = filename_new[:-10]
+    return filename_new
